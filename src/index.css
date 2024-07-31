@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.pageContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.inline {
+    width: auto;
+}
+
+header, main, section {
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+}
+
+header {
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+header div {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+header form {
+    overflow: auto;
+}
+
+header input, header select {
+    margin-top: 3px;
+    margin-right: 10px;
+    padding: 6px;
+}
+
+header input {
+    width: 75px;
+}
+
+header input[type="checkbox"] {
+    width: auto;
+}
+
+.button {
+    width: auto;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background-color: #0078D7;
+    padding: 10px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #0099BC;
+    border-color: #000000;
+}
+
+header .delete {
+    background-color: #E81123;
+}
+
+header .delete:hover {
+    background-color: #E74856;
+}
+
+header .hidden-control-container {
+    margin-top: 0;
+    display: none;
+    padding: 7px 5px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+}
+
+header .unhide-settings {
+    display: none;
+}
+
+header .hidden-control-container .button {
+    background-color :#FF8C00;
+}
+
+header .hidden-control-container .button:hover {
+    background-color :#FFB900;
+}
+
+header .worksheet-section {
+    margin: 20px 0;
+    padding: 7px 5px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+}
+
+header textarea {
+    display: none;
+    width: 100%;
+    margin-top: 5px;
+}
+
+header #customAnswer {
+    display: none;
+    width: 100%;
+}
+
+header #customAnswer input[type="text"] {
+    width: 100%;
+    margin-right: 0;
+}
+
+header .error-message {
+    display: none;
+    width: auto;
+    margin: 20px;
+    padding: 10px;
+    background-color: #E81123;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main, section {
+    position: relative;
+    font-family: 'Comic Sans MS', 'sans-serif';
+    color: #2980b9;
+    font-size: 20px;
+    overflow: auto;
+    display: none;
+}
+
+main h1, section h1 {
+    text-align: center;
+    color: #e74c3c;
+    margin: 0.5em;
+    font-size: 2em;
+}
+
+main img, section img {
+    width: 64px;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#worksheet {
+    overflow: auto;
+}
+
+#answersheet {
+    overflow: auto;
+}
+
+.answerBox, .tickBox {
+    border: 1px solid #e67e22;
+    border-radius: 5px;
+}
+
+.answerBox {
+    min-width: 50px;
+    min-height: 30px;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+}
+
+.question .tickBox {
+    min-width: 20px;
+    min-height: 20px;
+    margin-top: 5px;
+    float: right;
+    display: none;
+}
+
+.questionContainer {
+    width: 50%;
+    overflow: auto;
+    float: left;
+}
+
+.question {
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+    margin: 5px;
+    float: none;
+}
+
+.questionNumber {
+    color: #2c3e50;
+}
+
+.question div {
+    float: left;
+}
+
+.question div:first-child {
+    margin-right: 10px;
+}
+
+#customBox, #customAnswerBox {
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+    margin: 5px;
+    min-height: 250px;
+    position: relative;
+    display: none;
+}
+
+#customAnswerBox {
+    min-height: 30px;
+}
+
+#customBox .customQuestion {
+    white-space: pre-wrap;
+}
+
+#customBox .tickBox {
+    width: 20px;
+    height: 20px;
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#customBox .answerBox {
+    float: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.scoreBox {
+/*    width: fit-content;*/
+    width: 100%;
+    float: right;
+    margin: 5px;
+}
+
+.scoreBox .send-answer {
+    font-size: 14px;
+    padding: 7px;
+}
+
+.scoreBox .answerBoxSection {
+    margin: 3px;
+    float: right !important;
+}
+
+.answerBoxSection {
+    float: right;
+}
+
+.answerBoxSection .customAnswerBoxTitle {
+    float: left;
+    margin-right: 10px;
+}
+.scoreBox div:last-child {
+    float: left;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.note {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 0.75rem;
+    color: #000000;
+}
+
+.answerBoxInput {
+    border: 0;
+    width: 80px;
+}
+
+.answerBoxInput:focus-visible {
+    border: 0;
+}
+
+@media print {
+    header {
+        display: none;
+    }
+
+    @page {
+        size: auto;
+        margin: 5mm;
+    }
+
+    main {
+        page-break-after: always;
+    }
+
+    .pageContainer {
+        width: 100%;
+    }
+
+    Navbar, #funnyimg, #logoimg, #logout_btn, .scoreBox .send-answer {
+        display: none;
+    }
+}
